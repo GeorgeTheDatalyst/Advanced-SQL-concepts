@@ -17,4 +17,8 @@ Whenever the `manager_id` field in the `Employees` table is updated, the trigger
 AFTER UPDATE trigger on Employees table.
 Checks if a record with the same employee, name, new manager, and department already exists in Employee_rank_change.
 
--- If found → raises error:
+If found → raises error:
+```sql
+Entry exists!!! Duplicate entry not allowed
+```
+
