@@ -21,4 +21,21 @@ If found → raises error:
 ```sql
 Entry exists!!! Duplicate entry not allowed
 ```
+# Testing
+You can test the trigger with the following example:
+```sql
+-- Example: Change manager for employee with ID 1005
+UPDATE Employees
+SET manager_id = 1
+WHERE emp_id = 1005;
+```
+If this is the first time the manager is changed, a record will be inserted into Employee_rank_change.
+If the same change already exists, the trigger will raise an error.
+
+# Use Cases:
+rack promotions/demotions in real-time.
+Maintain a history of manager changes for auditing.
+Prevent duplicate records in change logs.
+# License
+MIT 
 
